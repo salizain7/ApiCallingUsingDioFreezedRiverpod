@@ -1,16 +1,11 @@
 # firstflutter
 
-A new Flutter project.
+This project is very simple learning for DIO, FREEZED and RIVERPOD.
+For new developers and people who have a little knowledge of flutter and state management will be really beneficial from this code.
 
-## Getting Started
+This project show how to call an api using dio and parse it using json parser along with freezed package for models.
 
-This project is a starting point for a Flutter application.
+I have also added on first tab i.e index 0 the api call so when you will press fist tab  you will see data on screen from frist index of data list
 
-A few resources to get you started if this is your first Flutter project:
+More over this project also explains to manage stats i.e loading, initail, fetchdata success/ Error for handling in widget.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
