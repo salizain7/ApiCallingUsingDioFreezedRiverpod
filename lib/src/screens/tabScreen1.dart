@@ -61,7 +61,7 @@ class tabScreenState extends ConsumerState<tabScreen1> {
                     Text(ref
                         .watch(tabDataScreenControllerProvider
                         .notifier)
-                        .tabData.name)
+                        .tabData.name+ "   "+ context.loc.explore_search)
               )
                   : Text(context.loc.errorUndefinedErrorhappened);
           } else {
