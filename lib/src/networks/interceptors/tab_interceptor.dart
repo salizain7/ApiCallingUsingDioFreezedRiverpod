@@ -11,7 +11,7 @@ class TabInterceptor extends InterceptorsWrapper{
   @override
   void onRequest(
       RequestOptions options, RequestInterceptorHandler handler) async {
-    final token = '1234';// sharePreference.oAuthToken;
+    const token = '1234';// sharePreference.oAuthToken;
     if (token != null && token.isNotEmpty) {
       options.queryParameters.putIfAbsent('auth', () => token);
       super.onRequest(options, handler);
