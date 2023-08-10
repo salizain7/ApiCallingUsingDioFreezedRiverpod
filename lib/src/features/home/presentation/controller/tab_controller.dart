@@ -1,10 +1,10 @@
 
-import 'package:firstflutter/src/screens/controller/tab_state.dart';
+import 'package:firstflutter/src/features/home/presentation/controller/tab_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:injectable/injectable.dart';
 
-import '../data/repositories/tab_repository.dart';
-import '../domain/coin.dart';
+import '../../data/repositories/tab_repository.dart';
+import '../../domain/coin.dart';
 
 @injectable
 class TabDataScreenController extends StateNotifier<TabDataState> {

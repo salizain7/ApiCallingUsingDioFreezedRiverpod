@@ -11,9 +11,9 @@ import 'package:injectable/injectable.dart' as _i2;
 import '../networks/dio_client.dart' as _i3;
 import '../networks/interceptors/tab_interceptor.dart' as _i7;
 import '../networks/tab_api_client.dart' as _i5;
-import '../screens/controller/tab_controller.dart' as _i9;
-import '../screens/data/data_sources/tab_remote_source.dart' as _i6;
-import '../screens/data/repositories/tab_repository.dart' as _i8;
+import '../features/home/presentation/controller/tab_controller.dart' as _i9;
+import '../features/home/data/data_sources/tab_remote_source.dart' as _i6;
+import '../features/home/data/repositories/tab_repository.dart' as _i8;
 import '../utils/navigation_service.dart' as _i4;
 import 'register_services_module.dart'
     as _i10; // ignore_for_file: unnecessary_lambdas

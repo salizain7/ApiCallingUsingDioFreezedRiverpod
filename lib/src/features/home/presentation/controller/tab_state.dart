@@ -3,7 +3,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../domain/coin.dart';
+import '../../domain/coin.dart';
 
 @immutable
 abstract class TabDataState extends Equatable{

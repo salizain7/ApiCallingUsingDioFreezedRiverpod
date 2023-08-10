@@ -1,14 +1,15 @@
 
 import 'dart:async';
 
-import 'package:firstflutter/src/screens/tabScreen1.dart';
-import 'package:firstflutter/src/screens/tabScreen2.dart';
-import 'package:firstflutter/src/screens/tabScreen3.dart';
+import 'package:firstflutter/src/features/home/tabScreen1.dart';
+import 'package:firstflutter/src/features/home/tabScreen2.dart';
+import 'package:firstflutter/src/features/home/tabScreen3.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../navigations/primary_navigation.dart';
+import '../../navigations/primary_navigation.dart';
+
 
 var bottomWidgetKey = GlobalKey<State<BottomNavigationBar>>();
 bool _initialUriIsHandled = false;
@@ -31,9 +32,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
   void _onItemTapped(int index) {
 
     ref.read(selectedIndexState.notifier).update((state) => index);
-    // setState(() {
-    //   _selectedIndex = index;
-    // });
+
   }
 
 
@@ -52,59 +51,12 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
     super.dispose();
   }
 
-  // List<String>? getCmds() {
-  //   late final String cmd;
-  //   var cmdSuffix = '';
-  //
-  //   const plainPath = 'path/subpath';
-  //   const args = 'path/portion/?uid=123&token=abc';
-  //   const emojiArgs =
-  //       '?arr%5b%5d=123&arr%5b%5d=abc&addr=1%20Nowhere%20Rd&addr=Rand%20City%F0%9F%98%82';
-  //
-  //   if (kIsWeb) {
-  //     return [
-  //       plainPath,
-  //       args,
-  //       emojiArgs,
-  //       // Cannot create malformed url, since the browser will ensure it is valid
-  //     ];
-  //   }
-  //
-  //   if (Platform.isIOS) {
-  //     cmd = '/usr/bin/xcrun simctl openurl booted';
-  //   } else if (Platform.isAndroid) {
-  //     cmd = '\$ANDROID_HOME/platform-tools/adb shell \'am start'
-  //         ' -a android.intent.action.VIEW'
-  //         ' -c android.intent.category.BROWSABLE -d';
-  //     cmdSuffix = "'";
-  //   } else {
-  //     return null;
-  //   }
-  //
-  //   // https://orchid-forgery.glitch.me/mobile/redirect/
-  //   return [
-  //     '$cmd "unilinks://host/$plainPath"$cmdSuffix',
-  //     '$cmd "unilinks://example.com/$args"$cmdSuffix',
-  //     '$cmd "unilinks://example.com/$emojiArgs"$cmdSuffix',
-  //     '$cmd "unilinks://@@malformed.invalid.url/path?"$cmdSuffix',
-  //   ];
-  // }
-
 
 
   @override
   Widget build(BuildContext context) {
 
 
-
-    //ref.watch(selectedSportStateChangesProvider);
-    //ref.watch(selectedSportStateChangesProvider);
-    //print(getIt<NavigationService>().navigatorKey.currentContext?.loc.loc.oopsSomethingWrong);
-    // Future.delayed(const Duration(seconds: 12)).then((value) {
-    //   // setState(() {
-    //   ref.watch(showWidgetProvider.notifier).update((state) => false);
-    //   // });
-    // });
     return Scaffold(
       key: _key,
       backgroundColor: Theme.of(context).backgroundColor,
@@ -115,7 +67,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
           decoration: BoxDecoration(
             color: Theme.of(context).appBarTheme.backgroundColor,
           ),
-          // child: PrimaryNavigationAppBar(globalKey: _key, selectedIndex: _selectedIndex),
+
           child: PrimaryNavigationAppBar(globalKey: _key, selectedIndex: ref.watch(selectedIndexState)),
 
           ),

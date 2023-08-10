@@ -1,5 +1,4 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:firstflutter/src/screens/home_screen.dart';
 import 'package:firstflutter/src/utils/app_localizations_context.dart';
 import 'package:firstflutter/src/utils/navigation_service.dart';
 import 'package:flutter/cupertino.dart';
@@ -9,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../main.dart';
 import 'di/service_locator.dart';
+import 'features/home/home_screen.dart';
 import 'networks/state/network_info.dart';
 class MyApp extends ConsumerStatefulWidget {
   const MyApp({Key? key}) : super(key: key);

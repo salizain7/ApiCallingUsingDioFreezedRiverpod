@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:injectable/injectable.dart';
 
-import '../../../di/service_locator.dart';
+import '../../../../di/service_locator.dart';
 import '../../domain/coin.dart';
 import '../data_sources/tab_remote_source.dart';
 

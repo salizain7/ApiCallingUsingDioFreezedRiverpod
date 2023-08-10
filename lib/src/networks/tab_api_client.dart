@@ -1,7 +1,8 @@
 import 'package:dio/dio.dart';
-import 'package:firstflutter/src/screens/domain/coin.dart';
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/http.dart';
+
+import '../features/home/domain/coin.dart';
 
 part 'tab_api_client.g.dart';
 

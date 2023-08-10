@@ -1,14 +1,14 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:firstflutter/src/screens/controller/tab_controller.dart';
+import 'package:firstflutter/src/features/home/presentation/controller/tab_controller.dart';
+import 'package:firstflutter/src/features/home/presentation/controller/tab_state.dart';
 import 'package:firstflutter/src/utils/app_localizations_context.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../networks/state/network_info.dart';
-import 'controller/tab_state.dart';
-import 'no_internet_connection.dart';
+import '../../../common_widgets/errors/no_internet_connection.dart';
+import '../../networks/state/network_info.dart';
 
 class tabScreen1 extends ConsumerStatefulWidget {
   const tabScreen1({Key? key}) : super(key: key);
@@ -42,10 +42,10 @@ class tabScreenState extends ConsumerState<tabScreen1> {
             return // SingleChildScrollView(
               // child:
               state is TabDataLoadingState || state is TabDataInitialState
-                  ? Column(
+                  ? const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Center(
                     child: CircularProgressIndicator(),
                   ),
@@ -58,10 +58,10 @@ class tabScreenState extends ConsumerState<tabScreen1> {
               Container(
                 color: Colors.grey,
                 child:
-                    Text(ref
+                    Text("${ref
                         .watch(tabDataScreenControllerProvider
                         .notifier)
-                        .tabData.name+ "   "+ context.loc.explore_search)
+                        .tabData.name}   ${context.loc.explore_search}")
               )
                   : Text(context.loc.errorUndefinedErrorhappened);
           } else {
