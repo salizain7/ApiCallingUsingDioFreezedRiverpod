@@ -19,8 +19,7 @@ class Coin with _$Coin{
 
 @Freezed()
 class CoinModel  with _$CoinModel{
-
-
+  
   const factory CoinModel({
     List<Coin>? team,
   }) = _CoinModel;
