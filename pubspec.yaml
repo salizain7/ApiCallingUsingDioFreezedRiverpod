@@ -20,7 +20,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.5 <3.0.0'
+  sdk: '>=3.0.2 <4.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -31,41 +31,74 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
-  intl: ^0.18.0
-
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  flutter_riverpod: ^2.0.0-dev.7
-  flutter_bloc: ^8.0.1
-  connectivity_plus: ^2.2.0
-  injectable: ^1.5.3
-  dio: ^4.0.6
-  retrofit: ^3.0.1+1
-  get_it: ^7.2.0
-  equatable: ^2.0.3
-  json_annotation: ^4.7.0
-  flutter_svg: ^1.1.5
-  freezed_annotation: ^2.2.0
+
+  # For DI, State Management ...
+  flutter_riverpod: ^2.3.6
+
+  # For Checking Connection on the Internet
+  connectivity_plus: ^4.0.2
+
+  # For Calling Endpoints
+  retrofit: ^4.0.1
+  dio: ^5.3.2
+
+  # For Comparing objects
+  equatable: ^2.0.5
+
+  # For Generate FromJson and ToJson Methods.
+  json_annotation: ^4.8.1
+  freezed: ^2.4.2
+
+  # For Load Svg Images
+  flutter_svg: ^2.0.7
+
+  # For Localization
+  intl: ^0.18.1
+
+  # For return Either, it is neither Left(Error State) nor Right(Success State)
+  dartz: ^0.10.1
+
+  # For responsive ui
+  flutter_screenutil: ^5.8.4
+
+  # For add fonts type for texts
+  google_fonts: ^4.0.4
+
+  # Decimal functions
+  decimal: ^2.3.3
+
+  # For custom loader
+  flutter_spinkit: ^5.2.0
+
+  # For storing data on local storage
+  hive: ^2.2.3
+
+  # flushbar
+  another_flushbar: ^1.12.30
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^2.0.0
-  build_runner: ^2.2.0
-  injectable_generator: ^1.5.3
-  freezed: ^2.3.2
-  json_serializable: ^6.5.4
-  retrofit_generator: ^4.0.0+1
+  flutter_lints: ^2.0.2
+  build_runner: ^2.4.6
+  json_serializable: ^6.7.1
+  retrofit_generator: ^7.0.8
+  # Localization config
+  flutter_localizations:
+    sdk: flutter
+
+
+# Localization config
+flutter_intl:
+  main_locale: en
+  enabled: true
+  output_dir: lib/src/core/translations
+  arb_dir: lib/src/core/translations
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

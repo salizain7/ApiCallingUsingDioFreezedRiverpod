@@ -1,0 +1,10 @@
+const String svgPath = "assets/svg_images/";
+const String imagePath = "assets/images/";
+const String defaultStr = "-";
+const String emailHint = "example@gmail.com";
+const String passwordHint = "**************";
+const String unknownError = "Unknown Error";
+const String uae = "UAE";
+const String uk = "UK";
+const String dark = "dark";
+const String light = "light";
