@@ -21,9 +21,6 @@ class InternetConnectionState extends ConsumerState<NoInternetConnection> {
         builder: (_, WidgetRef ref, __){
 
           return Container(
-            //width: double.infinity,
-            //height: double.infinity,
-
             child: Center(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -35,17 +32,9 @@ class InternetConnectionState extends ConsumerState<NoInternetConnection> {
                     width: 32,
                     height: 32,
                   ),
-                  // Container(
-                  //   width: 160,
-                  //   height: 160,
-                  //   decoration: const BoxDecoration(
-                  //       shape: BoxShape.circle,
-                  //       color: AppColors.systemColorWhite,
-                  //   ),
-                  //   child: const Center(child: Image(image: AssetImage("assets/images/no_internet.png",), width: 64, height: 60,)),
-                  // ),
+
                   const SizedBox(height: 10,),
-                  Text('No internet Connection'),
+                  const Text('No internet Connection'),
                   const SizedBox(height: 10,),
 
                   GestureDetector(

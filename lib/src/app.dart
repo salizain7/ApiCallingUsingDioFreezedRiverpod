@@ -69,7 +69,6 @@ class MyAppState extends ConsumerState<MyApp> with WidgetsBindingObserver {
     return BlocProvider(
       create: (context) => NetworkInfoCubit(Connectivity()),
       child: MaterialApp(
-       // navigatorKey: getIt<NavigationService>().navigatorKey,
         debugShowCheckedModeBanner: false,
 
           navigatorKey: getIt<NavigationService>().navigatorKey,
@@ -77,7 +76,7 @@ class MyAppState extends ConsumerState<MyApp> with WidgetsBindingObserver {
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           onGenerateTitle: (context) => context.loc.appTitle,
           locale: const Locale("en"),
-          supportedLocales: [
+          supportedLocales: const [
             Locale('en', ''), // English, no country code
 
           ],

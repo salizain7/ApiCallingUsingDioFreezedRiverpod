@@ -13,11 +13,6 @@ class NavigationService {
     return navigatorKey.currentState!.pop();
   }
 
-  // goBackUntil(String routeName) {
-  //   MaterialPageRoute(settings: RouteSettings(name: '/home'), builder: (BuildContext context) { return HomeScreen(); });
-  //   return navigatorKey.currentState!.popUntil( ModalRoute.withName('/$routeName'));
-  // }
-
   goBackUntilAndPush(String routeName) {
     return navigatorKey.currentState!.pushNamedAndRemoveUntil(routeName,ModalRoute.withName('/'));
   }

@@ -4,7 +4,7 @@
   "someThingWentWrongDesc": "Something went wrong\\nPleaseTry again later.",
   "noInternetConnectionDesc": "No Internet connection\\nHurry up! get wifi",
   "dashboard": "Dashboad",
-  "explore_search": "Explore and Search",
+  "explore_search": "Api Response Value",
   "user_profile": "User Profile",
   "errorUndefinedErrorhappened": "Something went wrong. Please try again",
 
