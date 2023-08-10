@@ -80,6 +80,12 @@ dependencies:
   # flushbar
   another_flushbar: ^1.12.30
 
+  # Get paths from device
+  path_provider: ^2.1.0
+
+  # Validate Email
+  email_validator: ^2.1.17
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

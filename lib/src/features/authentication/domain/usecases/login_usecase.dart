@@ -1,7 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:firstflutter/src/core/network/error/failures.dart';
+import 'package:firstflutter/src/features/authentication/domain/entities/params/login_params.dart';
 import 'package:firstflutter/src/features/authentication/domain/repositories/auth_repository.dart';
 import 'package:firstflutter/src/shared/domain/usecases/usecase.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 
 class LoginUseCase extends UseCase<String, LoginParams> {
@@ -20,24 +22,3 @@ class LoginUseCase extends UseCase<String, LoginParams> {
   }
 }
 
-class LoginParams {
-  LoginParams({
-    required this.email,
-    required this.password,
-  });
-
-  late final String email;
-  late final String password;
-
-  LoginParams.fromJson(Map<String, dynamic> json) {
-    email = json['email'];
-    password = json['password'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final data = <String, dynamic>{};
-    data['email'] = email;
-    data['password'] = password;
-    return data..removeWhere((key, value) => value == null);
-  }
-}

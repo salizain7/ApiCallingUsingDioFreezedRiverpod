@@ -11,7 +11,7 @@ class ConnectivityStatusNotifier extends StateNotifier<ConnectivityStatusEnum> {
   ConnectivityStatusNotifier() : super(ConnectivityStatusEnum.isConnected) {
     if (state == ConnectivityStatusEnum.isConnected) {
       lastResult = ConnectivityStatusEnum.isConnected;
-    } else {
+    } else if(state == ConnectivityStatusEnum.isDisconnected){
       lastResult = ConnectivityStatusEnum.isDisconnected;
     }
     lastResult = ConnectivityStatusEnum.notDetermined;
@@ -21,6 +21,7 @@ class ConnectivityStatusNotifier extends StateNotifier<ConnectivityStatusEnum> {
       }else{
         newState = ConnectivityStatusEnum.isDisconnected;
       }
+      state = newState!;
 
       if (newState != lastResult) {
         state = newState!;

@@ -9,6 +9,7 @@ extension PageRouteNameExtension on AppRouteNameEnum {
       case AppRouteNameEnum.login:
         return "/login_page";
 
+
       default:
         return "/login_page";
     }

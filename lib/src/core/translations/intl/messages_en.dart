@@ -41,10 +41,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "Something went wrong. Please try again"),
         "explore_search":
             MessageLookupByLibrary.simpleMessage("Api Response Value"),
+        "incorrect_phone_number":
+            MessageLookupByLibrary.simpleMessage("Incorrect Phone Number"),
         "internalServerError":
             MessageLookupByLibrary.simpleMessage("Internal server error."),
         "internal_error":
             MessageLookupByLibrary.simpleMessage("Internal Error"),
+        "invalid_email_address": MessageLookupByLibrary.simpleMessage(
+            "Invalid email address entered. Please check the email address and try again."),
         "light": MessageLookupByLibrary.simpleMessage("Light"),
         "methodNotAllowed": MessageLookupByLibrary.simpleMessage(
             "Method not allowed. Please check the Allow header for the allowed HTTP methods."),
@@ -54,6 +58,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "oopsSomethingWrong":
             MessageLookupByLibrary.simpleMessage("Oops something went wrong!"),
         "or": MessageLookupByLibrary.simpleMessage("or"),
+        "password_does_not_match":
+            MessageLookupByLibrary.simpleMessage("Password does not match"),
+        "password_is_empty":
+            MessageLookupByLibrary.simpleMessage(". Password is empty\n"),
+        "password_should_contain_at_least_8_characters":
+            MessageLookupByLibrary.simpleMessage(
+                ". Password should contain at least 8 characters\n"),
+        "password_should_contain_at_least_one_lowercase_letter":
+            MessageLookupByLibrary.simpleMessage(
+                ". Password should contain at least one lowercase letter\n"),
+        "password_should_contain_at_least_one_number":
+            MessageLookupByLibrary.simpleMessage(
+                ". Password should contain at least one number\n"),
+        "password_should_contain_at_least_one_symbol":
+            MessageLookupByLibrary.simpleMessage(
+                ". Password should contain at least one symbol\n"),
+        "password_should_contain_at_least_one_uppercase_letter":
+            MessageLookupByLibrary.simpleMessage(
+                ". Password should contain at least one uppercase letter\n"),
         "processing": MessageLookupByLibrary.simpleMessage("Processing"),
         "receivingTimeout":
             MessageLookupByLibrary.simpleMessage("Receiving timeout occurred."),
@@ -61,6 +84,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Request to the server was cancelled."),
         "requestTimeout":
             MessageLookupByLibrary.simpleMessage("Request send timeout."),
+        "required_field":
+            MessageLookupByLibrary.simpleMessage("Required Field"),
         "resourceNotExist": MessageLookupByLibrary.simpleMessage(
             "The requested resource does not exist."),
         "someThingWentWrongDesc": MessageLookupByLibrary.simpleMessage(
@@ -73,6 +98,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Unexpected error occurred."),
         "unsupportedMediaType": MessageLookupByLibrary.simpleMessage(
             "Unsupported media type. The requested content type or version number is invalid."),
-        "user_profile": MessageLookupByLibrary.simpleMessage("User Profile")
+        "user_profile": MessageLookupByLibrary.simpleMessage("User Profile"),
+        "weak_password_message":
+            MessageLookupByLibrary.simpleMessage("The password is weak")
       };
 }

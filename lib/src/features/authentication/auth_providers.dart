@@ -9,25 +9,25 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 // Auth client
 final authClientProvider = Provider<AuthClient>(
       (ref) => AuthClient(
-    ref.watch(dioProvider),
+    ref.read(dioProvider),
   ),
 );
 
 // Auth api
 final authApiProvider = Provider<AuthApi>(
-      (ref) => AuthApi(ref.watch(authClientProvider)),
+      (ref) => AuthApi(ref.read(authClientProvider)),
 );
 
 // Auth repository
 final authRepositoryProvider = Provider<AuthRepository>(
       (ref) => AuthRepositoryImpl(
-    ref.watch(authApiProvider),
+    ref.read(authApiProvider),
   ),
 );
 
 // Auth usecase
 final loginUseCaseProvider = Provider<LoginUseCase>(
       (ref) => LoginUseCase(
-    ref.watch(authRepositoryProvider),
+    ref.read(authRepositoryProvider),
   ),
 );
