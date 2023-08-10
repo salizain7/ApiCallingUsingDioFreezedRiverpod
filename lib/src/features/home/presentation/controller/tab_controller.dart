@@ -16,17 +16,15 @@ class TabDataScreenController extends StateNotifier<TabDataState> {
 
   Future<void> getTabData() async {
     state = const TabDataLoadingState();
-//en if arabic indian malaysia
 
     final tabModel = await tabRepository.tabProvider('en');
-    // final newsModel = await newsRepository.newsListProvider(await navigationDrawerRepository.selectedLanguageProvider());
     if (tabModel.team != null) {
       tabData = tabModel.team![0];
       state = TabDataSuccessFetchDataState(tabData: tabModel.team![0]);
 
     }
     else{
-      state =  TabDataErrorFetchDataState(errorMsg: 'Something went wrong, Please try later');
+      state =  const TabDataErrorFetchDataState(errorMsg: 'Something went wrong, Please try later');
     }
   }
 

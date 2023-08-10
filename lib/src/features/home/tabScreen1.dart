@@ -28,19 +28,18 @@ class tabScreenState extends ConsumerState<tabScreen1> {
           SnackBar(content: Text(state.errorMsg.toString())),
         );
       }
-      if (state is TabDataLoadingState || state is TabDataInitialState) {
-        const Center(
-          child: CircularProgressIndicator(),
-        );
-      }
+      // if (state is TabDataLoadingState || state is TabDataInitialState) {
+      //   const Center(
+      //     child: CircularProgressIndicator(),
+      //   );
+      // }
 
     });
 
     return BlocBuilder<NetworkInfoCubit, ConnectivityResult>(
         builder: (context, connectivityState) {
           if (isConnected(connectivityState)) {
-            return // SingleChildScrollView(
-              // child:
+            return
               state is TabDataLoadingState || state is TabDataInitialState
                   ? const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -67,6 +66,7 @@ class tabScreenState extends ConsumerState<tabScreen1> {
           } else {
             return const NoInternetConnection();
           }
-        });
+        }
+        );
   }
 }
