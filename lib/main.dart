@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:firstflutter/src/app.dart';
+import 'package:firstflutter/src/shared/injections.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive/hive.dart';
@@ -13,6 +14,9 @@ final container = ProviderContainer();
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Init injection
+  await initInjections();
 
   // Initial hive local db and open box for language
   var path = (await getApplicationDocumentsDirectory()).path;

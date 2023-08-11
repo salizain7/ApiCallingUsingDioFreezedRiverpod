@@ -17,7 +17,10 @@ class LoginPage extends ConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(state.toString()),
+          Text(
+            state.toString(),
+            style: Theme.of(context).textTheme.bodyLarge!.copyWith(),
+          ),
           ButtonWidget(
             text: "Call Api",
             onPressed: () {

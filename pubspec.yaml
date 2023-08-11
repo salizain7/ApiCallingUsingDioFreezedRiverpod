@@ -86,6 +86,9 @@ dependencies:
   # Validate Email
   email_validator: ^2.1.17
 
+  # Dependency Injection
+  get_it: ^7.6.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

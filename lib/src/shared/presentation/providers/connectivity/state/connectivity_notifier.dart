@@ -16,7 +16,7 @@ class ConnectivityStatusNotifier extends StateNotifier<ConnectivityStatusEnum> {
     }
     lastResult = ConnectivityStatusEnum.notDetermined;
     Connectivity().onConnectivityChanged.listen((ConnectivityResult result) {
-      if(result == ConnectivityResult.mobile || ConnectivityResult.mobile == ConnectivityResult.wifi){
+      if(result == ConnectivityResult.mobile || result == ConnectivityResult.wifi){
         newState = ConnectivityStatusEnum.isConnected;
       }else{
         newState = ConnectivityStatusEnum.isDisconnected;

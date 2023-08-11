@@ -5,7 +5,7 @@ import 'package:firstflutter/src/core/styles/app_colors.dart';
 import 'package:firstflutter/src/core/translations/l10n.dart';
 import 'package:firstflutter/src/core/utils/constant/app_constants.dart';
 import 'package:firstflutter/src/shared/domain/entities/enums/language_enum.dart';
-import 'package:firstflutter/src/shared/domain/providers/language/language_provider.dart';
+import 'package:firstflutter/src/shared/presentation/providers/language/language_provider.dart';
 import 'package:firstflutter/src/shared/presentation/widgets/drawer_item_widget.dart';
 import 'package:firstflutter/src/shared/presentation/widgets/rounded_border_image_widget.dart';
 import 'package:flutter/material.dart';

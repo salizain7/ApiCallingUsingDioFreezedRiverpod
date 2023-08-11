@@ -4,15 +4,14 @@ import 'package:firstflutter/src/core/styles/app_theme.dart';
 import 'package:firstflutter/src/core/translations/l10n.dart';
 import 'package:firstflutter/src/features/authentication/presentation/pages/login_page.dart';
 import 'package:firstflutter/src/shared/domain/entities/enums/connectivity_status_enum.dart';
+import 'package:firstflutter/src/shared/presentation/providers/connectivity/connectivity_provider.dart';
+import 'package:firstflutter/src/shared/presentation/providers/theme/theme_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'shared/domain/entities/enums/theme_mode_enum.dart';
-import 'shared/domain/providers/connectivity/connectivity_provider.dart';
-import 'shared/domain/providers/theme/theme_provider.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-
 import 'shared/presentation/pages/no_route_defined_page.dart';
 
 class MyApp extends ConsumerStatefulWidget {
@@ -32,8 +31,6 @@ class MyAppState extends ConsumerState<MyApp> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-
-
     // Theme provider
     final themMode = ref.watch(themeModeProvider);
 
@@ -41,7 +38,7 @@ class MyAppState extends ConsumerState<MyApp> with WidgetsBindingObserver {
       builder: (context, ref, child) {
         // Connectivity provider
         ConnectivityStatusEnum connectivityStatusProvider =
-        ref.watch(connectivityStatusProviders);
+            ref.watch(connectivityStatusProviders);
         // Handle connectivity here
 
 
@@ -52,7 +49,8 @@ class MyAppState extends ConsumerState<MyApp> with WidgetsBindingObserver {
           splitScreenMode: true,
           builder: (context, child) {
             return MaterialApp(
-              theme: themMode == ThemeModeEnum.dark ? darkAppTheme : lightAppTheme,
+              theme:
+                  themMode == ThemeModeEnum.dark ? darkAppTheme : lightAppTheme,
               debugShowCheckedModeBanner: false,
               navigatorKey: navigatorKey,
               title: 'Localizations Sample App',
@@ -74,7 +72,8 @@ class MyAppState extends ConsumerState<MyApp> with WidgetsBindingObserver {
               home: child,
             );
           },
-          child: connectivityStatusProvider == ConnectivityStatusEnum.isDisconnected
+          child: connectivityStatusProvider ==
+                  ConnectivityStatusEnum.isConnected
               ? const LoginPage()
               : const NoRouteDefinedPage(),
         );
