@@ -32,7 +32,4 @@ class TabApiProvider{
       return CoinModel(team: null);
     }
   }
-
-
-
 }
